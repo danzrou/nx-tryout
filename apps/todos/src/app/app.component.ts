@@ -22,6 +22,8 @@ export class AppComponent {
   }
 
   addTodo() {
-    this.http.post<Todo>('api/addTodo', {}).subscribe(() => this.fetch());
+    this.http.post<Todo>('api/addTodo', {}).subscribe(() => {
+      this.fetch();
+    });
   }
 }
