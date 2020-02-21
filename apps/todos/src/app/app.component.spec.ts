@@ -1,11 +1,13 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed, async } from '@angular/core/testing';
+import { UiModule } from '@nx-tryout/ui';
 import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, UiModule, HttpClientTestingModule],
       declarations: [AppComponent]
     }).compileComponents();
   }));
@@ -27,7 +29,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain(
-      'Welcome to todos!'
+      'Todos'
     );
   });
 });

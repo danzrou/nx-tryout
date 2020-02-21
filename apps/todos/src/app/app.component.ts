@@ -9,6 +9,7 @@ import { Todo } from '@nx-tryout/data';
 })
 export class AppComponent {
   todos: Todo[] = [];
+  title = 'todos';
 
   constructor(private http: HttpClient) {
     this.fetch();
