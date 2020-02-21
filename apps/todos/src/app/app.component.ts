@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Todo } from './model/todo';
+import { Todo } from '@nx-tryout/data';
 
 @Component({
   selector: 'nx-tryout-root',
@@ -21,8 +21,6 @@ export class AppComponent {
   }
 
   addTodo() {
-    this.todos.push({
-      title: `New Todo ${Math.floor(Math.random() * 10000)}`
-    });
+    this.http.post<Todo>('api/addTodo', {}).subscribe(() => this.fetch());
   }
 }
