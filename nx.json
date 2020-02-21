@@ -1,0 +1,28 @@
+{
+  "npmScope": "nx-tryout",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "my": {
+      "tags": []
+    },
+    "my-e2e": {
+      "tags": [],
+      "implicitDependencies": ["my"]
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    }
+  }
+}
