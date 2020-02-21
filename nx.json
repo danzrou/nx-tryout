@@ -23,6 +23,13 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "todos": {
+      "tags": []
+    },
+    "todos-e2e": {
+      "tags": [],
+      "implicitDependencies": ["todos"]
     }
   }
 }
